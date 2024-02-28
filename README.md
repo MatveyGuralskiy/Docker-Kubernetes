@@ -11,6 +11,13 @@ Docker is a platform that enables developers to build, ship, and run application
  |-- README.md
 
 <p><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDc1dXp3MGNnY2d0aWwyM212bXNkbnk3aHZyYWo3d2szOHptbW5sdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0T0FUiZl51VPCLsqLR/giphy.gif" style="height:350px; width:700px" /></p>
+
+### 📝 Examples
+
+<p><img src="https://github.com/MatveyGuralskiy/Docker/blob/main/Screens/Python-game/Python-game.png?raw=true" style="height:350px; width:700px" /></p>
+
+<p><img src="https://github.com/MatveyGuralskiy/Docker/blob/main/Screens/View-text/View-text.png?raw=true" style="height:350px; width:700px" /></p>
+
 ## 📢 Additional Information
 
 I hope you liked my repository, don’t forget to rate it and if you notice a code malfunction or any other errors.
