@@ -1,0 +1,13 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: FirstCluster
+  region: eu-central-1
+
+nodeGroups:
+  - name: worker-node-1
+    instanceType: t3.medium
+
+  - name: worker-node-2
+    instanceType: t3.medium
