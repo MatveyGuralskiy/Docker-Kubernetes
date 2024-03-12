@@ -15,6 +15,8 @@ Docker is a platform that enables developers to build, ship, and run application
 
  |-- /Docker_Files
 
+ |-- /Docker_Image
+
  |-- /Kubernetes_Clusters
 
  |-- /Minicube_Kubectl
