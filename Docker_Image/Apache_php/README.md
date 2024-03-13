@@ -1,6 +1,6 @@
 # 🏗️ Installation
 Download Dockerfile, index.php and custom.conf from the repository<br>
-To edit the Apache Webserver change the index,php file only
+To edit the Apache Webserver change the index,php file only<br>
 After that run:<br>
 
 *docker build -t apache_php .*
