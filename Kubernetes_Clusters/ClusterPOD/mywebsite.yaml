@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mywebsite
+  labels:
+    env: staging
+    app: simple_website
+    owner: Matvey_Guralskiy
+spec:
+  containers:
+  - name: container-apache
+    image: matveyguralskiy/simple_website:latest
+    ports:
+    - containerPort: 80

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myphp
+  labels:
+    env: production
+    app: apache_php
+    server: nginx
+    owner: Matvey_Guralskiy
+spec:
+  containers:
+  - name: container-apache
+    image: matveyguralskiy/apache_php:latest
+    ports:
+    - containerPort: 80
+  - name: container-nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 7000
