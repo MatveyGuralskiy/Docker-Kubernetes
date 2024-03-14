@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-test
+  name: mywebsite-test
   labels:
      env: staging
      type: website
