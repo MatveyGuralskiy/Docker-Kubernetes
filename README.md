@@ -35,7 +35,7 @@ Docker is a platform that enables developers to build, ship, and run application
 
 <p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/Local_Cluster/Local_K8S_Cluster.png?raw=true" style="height:350px; width:700px" /></p>
 
-<p><img src="https://github.com/MatveyGuralskiy/Docker/blob/main/Screens/Python-game/Python-game.png?raw=true" style="height:350px; width:700px" /></p>
+<p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/Apache_html_V2.0/Docker_Image.png?raw=true" style="height:550px; width:700px" /></p>
 
 <p><img src="https://github.com/MatveyGuralskiy/Docker/blob/main/Screens/View-text/View-text.png?raw=true" style="height:350px; width:700px" /></p>
 
