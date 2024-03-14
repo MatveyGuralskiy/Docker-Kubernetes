@@ -10,24 +10,24 @@ How does a cluster look like in the example picture:
 <br>
 <h2>Steps of Creating from demo to real:</h2>
 
-<strong>First of all I create pods on worker nodes</strong>
+<strong>First of all I create deployment on worker nodes</strong>
 
-*kubectl apply -f mywebsite.yaml*
+*kubectl apply -f mywebserver.yaml*
 
-*kubectl apply -f myphp.yaml*
+I check the status of Cluster deployment:
 
-<strong>Now I run it in my localhost </strong>
+*kubectl rollout status deployment/mywebsite*
 
-The simple_webite pod I ran in port 6500:
+*kubectl get deployment*
 
-*kubectl port-forward mywebsite 6500:80*
+<strong>Now I run it in my localhost used any Pods id from 2 of them:</strong>
 
-The myphp pod I ran in port 6565:
+*kubectl get nodes* --> and I took Pod name of my deployment
 
-*kubectl port-forward myphp 6565:80*
+The simple_webite deployment pod I ran in port 8000:
 
-<br>
-<br>
+*kubectl port-forward mywebsite-(pod-name) 8000:80*
+
 <h2>The result of myapp deployment:</h2>
 <div align="center">
   <img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/ClusterDEPLOYMENT/Result.png?raw=true" alt="ClusterPOD" width="900" height="auto" />
