@@ -2,7 +2,11 @@
 
 Welcome to our Docker repository! Here you'll find a collection of Dockerfiles and Kubernetes clusters with configurations for various Docker images tailored to different purposes.<br>Each Dockerfile provides a concise setup for specific tasks, ensuring easy deployment and management of Docker containers. 
 
-Docker is a platform that enables developers to build, ship, and run applications as portable containers. These containers encapsulate everything needed to run an application, including the code, runtime, system tools, libraries, and settings. By utilizing Docker, developers can ensure consistency in their development environments across different machines and deployment targets. Docker's lightweight nature and efficient resource utilization make it an invaluable tool for both development and production environments alike.
+**Docker** is a platform that enables developers to build, ship, and run applications as portable containers. These containers encapsulate everything needed to run an application, including the code, runtime, system tools, libraries, and settings. By utilizing Docker, developers can ensure consistency in their development environments across different machines and deployment targets. Docker's lightweight nature and efficient resource utilization make it an invaluable tool for both development and production environments alike.
+
+**Kubernetes** is an container orchestration platform originally developed by Google and now maintained by the Cloud Native Computing Foundation (CNCF). It automates the deployment, scaling, and management of containerized applications.
+
+Containers are a way to package software in a format that can run isolated on a shared operating system (OS). Kubernetes provides a framework for deploying, managing, and scaling these containers across a cluster of machines. It abstracts away many of the complexities of managing individual containers and allows developers to focus on building and deploying their applications without worrying about the underlying infrastructure.
 <br>
 <br>
 <div align=center>
