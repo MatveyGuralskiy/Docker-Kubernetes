@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-test
+  labels:
+     env: staging
+     type: website
+     owner: Matvey_Guralskiy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+       based: apache-testing   #Label tag for Pods
+  template:
+    metadata:
+      labels:
+       based: apache-testing
+    spec:
+      containers:
+          - name: simple-website-test
+            image: matveyguralskiy/simple_website:latest
+            ports:
+               - containerPort: 80
