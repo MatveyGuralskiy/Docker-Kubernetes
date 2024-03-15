@@ -34,14 +34,15 @@ Containers are a way to package software in a format that can run isolated on a 
 ### 📝 Examples
 
 <br>
+<p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/ClusterSERVICE/Demonstration.png?raw=true" style="height:350px; width:700px" /></p>
+
+<p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/ClusterDEPLOYMENT/Demonstration.png?raw=true" style="height:350px; width:700px" /></p>
 
 <p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/Local_Cluster/Login_VM.png?raw=true" style="height:350px; width:700px" /></p>
 
 <p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/Local_Cluster/Local_K8S_Cluster.png?raw=true" style="height:350px; width:700px" /></p>
 
 <p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/Apache_html_V2.0/Docker_Image.png?raw=true" style="height:550px; width:700px" /></p>
-
-<p><img src="https://github.com/MatveyGuralskiy/Docker/blob/main/Screens/View-text/View-text.png?raw=true" style="height:350px; width:700px" /></p>
 
 <p><img src="Screens/Playground_Cluster/Docker_Playground.png" style="height:350px; width:700px" /></p>
 
