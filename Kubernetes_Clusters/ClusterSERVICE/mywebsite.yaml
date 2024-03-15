@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebsite-control
+  labels:
+     app: website_php
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+       based: apache_php           # Label tag for Pods
+  template:
+    metadata:
+      labels:
+       based: apache_php
+    spec:
+      containers:
+        - name: mywebsite
+          image: matveyguralskiy/apache_php:latest
+          ports:
+            - containerPort: 80    # Port on Pod
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: mywebsite-autoscaling
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: mywebsite-control 
+  minReplicas: 2
+  maxReplicas: 4
+  metrics:
+  - type: Resource
+    resource:
+       name: cpu
+       target:
+         type: Utilization
+         averageUtilization: 70
+  - type: Resource
+    resource:
+       name: memory
+       target:
+         type: Utilization
+         averageUtilization: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mywebsite
+  labels:
+    env: production
+    type: website
+    owner: Matvey_Guralskiy
+spec:
+  selector:
+    based: apache_php
+  ports:
+    - name: website-listener
+      protocol: TCP
+      port: 80                     # Port on Load-Balancer
+      targetPort: 80               # Port on Pod
+  type: LoadBalancer
