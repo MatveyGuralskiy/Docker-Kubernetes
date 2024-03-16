@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myswitzerland-control
+  labels:
+     app: website_html_css
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+       based: html_css                  # Label tag for Pods
+  template:
+    metadata:
+      labels:
+       based: html_css
+    spec:
+      containers:
+        - name: myswitzerland
+          image: matveyguralskiy/switzerland_website:V1.0
+          ports:
+            - containerPort: 80        # Port on Pod
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myswitzerland
+  labels:
+    env: staging
+    type: website
+    owner: Matvey_Guralskiy
+spec:
+  type: ClusterIP
+  selector:
+    based: html_css                   # Label tag for Pods
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80                        # Port on Load-Balancer
+      targetPort: 80                  # Port on Pod

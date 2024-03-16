@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myphp-control
+  labels:
+     app: website_php
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+       based: apache_php           # Label tag for Pods
+  template:
+    metadata:
+      labels:
+       based: apache_php
+    spec:
+      containers:
+        - name: myphp
+          image: matveyguralskiy/apache_php:latest
+          ports:
+            - containerPort: 80    # Port on Pod
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myphp
+  labels:
+    env: staging
+    type: website
+    owner: Matvey_Guralskiy
+spec:
+  type: ClusterIP
+  selector:
+    based: apache_php                 # Label tag for Pods
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80                        # Port on Load-Balancer
+      targetPort: 80                  # Port on Pod
