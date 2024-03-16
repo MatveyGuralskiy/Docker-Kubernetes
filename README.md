@@ -34,9 +34,10 @@ Containers are a way to package software in a format that can run isolated on a 
 ### 📝 Examples
 
 <br>
-<p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/ClusterSERVICE/Demonstration.png?raw=true" style="height:350px; width:700px" /></p>
 
-<p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/ClusterDEPLOYMENT/Demonstration.png?raw=true" style="height:350px; width:700px" /></p>
+<p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/ClusterINGRESS/Demonstration.png?raw=true" style="height:350px; width:700px" /></p>
+
+<p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/ClusterSERVICE/Demonstration.png?raw=true" style="height:350px; width:700px" /></p>
 
 <p><img src="https://github.com/MatveyGuralskiy/Docker-Kubernetes/blob/main/Screens/Local_Cluster/Login_VM.png?raw=true" style="height:350px; width:700px" /></p>
 
