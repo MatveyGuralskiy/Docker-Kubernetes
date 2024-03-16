@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebsite-control
+  labels:
+     app: website_html
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+       based: html_css_js             # Label tag for Pods
+  template:
+    metadata:
+      labels:
+       based: html_css_js
+    spec:
+      containers:
+        - name: mywebsite
+          image: matveyguralskiy/simple_website:V2.0
+          ports:
+            - containerPort: 80       # Port on Pod
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mywebsite
+  labels:
+    env: staging
+    type: website
+    owner: Matvey_Guralskiy
+spec:
+  type: ClusterIP
+  selector:
+    based: html_css_js                # Label tag for Pods
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80                        # Port on Load-Balancer
+      targetPort: 80                  # Port on Pod

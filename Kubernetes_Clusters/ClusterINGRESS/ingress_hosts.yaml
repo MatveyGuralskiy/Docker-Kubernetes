@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-hosts
+spec:
+  rules:
+  - host: apache_php.com
+  http:
+    paths:
+      - backend:
+          serviceName: myphp
+          servicePort: 80
+  - host: switzerland-info.com
+  http:
+    paths:
+      - backend:
+          serviceName: myswitzerland
+          servicePort: 80
+  - host: simple_website.com
+  http:
+    paths:
+      - backend:
+          serviceName: mywebsite
+          servicePort: 80

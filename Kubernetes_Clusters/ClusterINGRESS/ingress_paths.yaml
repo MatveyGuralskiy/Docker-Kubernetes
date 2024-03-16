@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-paths
+spec:
+  rules:
+  - host: (YOUR DNS NAME)
+  http:
+    paths:
+    - path: "/(YOUR PAGE)"
+      backend:
+        serviceName: myweb
+        servicePort: 80
+    - path: "/(YOUR PAGE)"
+      backend:
+        serviceName: myweb2
+        servicePort: 80
+    - path: "/(YOUR PAGE)"
+      backend:
+        serviceName: myweb3
+        servicePort: 80
