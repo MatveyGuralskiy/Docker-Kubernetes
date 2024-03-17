@@ -1,0 +1,4 @@
+cloneHtdocsFromGit:
+     enabled    : true
+     repository : https://github.com/MatveyGuralskiy/DevOps-Tools
+     branch     : main

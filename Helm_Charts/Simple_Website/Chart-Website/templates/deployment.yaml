@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  labels:
+     env: staging
+     type: website
+     owner: Matvey_Guralskiy
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+       based: {{ .Release.Name }}   #Label tag for Pods
+  template:
+    metadata:
+      labels:
+       based: {{ .Release.Name }}
+    spec:
+      containers:
+          - name: {{ .Release.Name }}-website
+            image: {{ .Values.container.image }}
+            ports:
+               - containerPort: 80

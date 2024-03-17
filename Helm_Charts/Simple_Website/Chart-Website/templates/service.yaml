@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-service
+  labels:
+    env: production
+    type: website
+    owner: Matvey_Guralskiy
+spec:
+  selector:
+    based: {{ .Release.Name }}
+  ports:
+    - name: {{ .Release.Name }}-listener
+      protocol: TCP
+      port: 80                     # Port on Load-Balancer
+      targetPort: 80               # Port on Pod
+  type: LoadBalancer
