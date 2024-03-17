@@ -1,0 +1,5 @@
+# Default values for Chart-Website.
+replicaCount: 4
+
+container:
+  image: matveyguralskiy/simple_website:latest
